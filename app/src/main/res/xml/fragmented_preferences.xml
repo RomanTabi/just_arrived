@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <cz.justarrived.models.CustomColorListPreference
+            android:key="@string/trigger_radius_key"
+            android:entries="@array/TriggerRadius"
+            android:entryValues="@array/TriggerRadiusData"
+            android:icon="@drawable/ic_pin_drop_grey_24dp"
+            android:defaultValue="20"
+            android:title="@string/trigger_radius"
+            android:summary="@string/trigger_radius_default"
+            />
+
+    <cz.justarrived.models.CustomColorSwitchPreference
+        android:key="@string/sms_or_notify_key"
+        android:icon="@drawable/ic_send_sms_24dp"
+        android:title="@string/sms"
+        android:summary="@string/send_sms_or_notification_only"
+        android:defaultValue="true"/>
+</PreferenceScreen>

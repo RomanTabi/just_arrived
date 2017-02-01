@@ -1,0 +1,166 @@
+<android.support.v7.widget.CardView
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/space_between_content_areas"
+    android:layout_marginBottom="@dimen/space_between_content_areas"
+    android:layout_marginLeft="@dimen/space_between_content_areas"
+    android:layout_marginRight="@dimen/space_between_content_areas"
+    card_view:cardCornerRadius="@dimen/card_corner_radius">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="vertical"
+                  android:animateLayoutChanges="true">
+
+        <!--Switch-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/card_button_height"
+            android:clickable="true"
+            android:background="?android:attr/selectableItemBackground">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/base_margin"
+                android:layout_marginStart="@dimen/base_margin"
+                android:layout_marginRight="@dimen/large_right_margin"
+                android:layout_marginEnd="@dimen/large_right_margin"
+                android:textColor="@color/colorPrimaryText"
+                android:text="@string/send_sms"
+                android:textSize="@dimen/subheading"
+                android:layout_centerVertical="true"/>
+
+            <Switch
+                android:id="@+id/sms_switch"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:paddingRight="@dimen/base_margin"
+                android:paddingEnd="@dimen/base_margin"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"/>
+
+        </RelativeLayout>
+
+        <!--Message-->
+        <RelativeLayout
+            android:id="@+id/message_label_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/category_label_size"
+            android:layout_marginTop="@dimen/space_between_content_areas"
+            android:paddingRight="@dimen/base_margin"
+            android:paddingLeft="@dimen/base_margin">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:textColor="@color/colorSecondaryText"
+                android:text="@string/message"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/message_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/title_and_list_items_height"
+            android:clickable="true"
+            android:paddingRight="@dimen/base_margin"
+            android:paddingLeft="@dimen/base_margin"
+            android:background="?android:attr/selectableItemBackground">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_mail_outline_24dp"
+                tools:ignore="ContentDescription"/>
+
+            <TextView
+                android:id="@+id/message"
+                android:layout_marginLeft="@dimen/list_items_texts_left_margin"
+                android:layout_marginRight="@dimen/list_items_texts_left_margin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:textColor="@color/colorPrimaryText"
+                android:text="@string/enter_sms_text"
+                android:textSize="@dimen/subheading"
+                android:layout_centerVertical="true"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_edit_24dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="@dimen/space_between_content_areas"
+                android:layout_marginEnd="@dimen/space_between_content_areas"/>
+
+        </RelativeLayout>
+
+        <!--Contact-->
+        <RelativeLayout
+            android:id="@+id/recipients_label_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/category_label_size"
+            android:layout_marginTop="@dimen/space_between_content_areas">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/base_margin"
+                android:layout_marginStart="@dimen/base_margin"
+                android:layout_marginRight="@dimen/base_margin"
+                android:layout_marginEnd="@dimen/base_margin"
+                android:textColor="@color/colorSecondaryText"
+                android:text="@string/recipients"
+                />
+
+        </RelativeLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycle_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:nestedScrollingEnabled="false"/>
+
+        <RelativeLayout
+            android:id="@+id/add_contact_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/title_and_list_items_height"
+            android:clickable="true"
+            android:paddingRight="@dimen/base_margin"
+            android:paddingLeft="@dimen/base_margin"
+            android:background="?android:attr/selectableItemBackground">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_add_green_24dp"
+                tools:ignore="ContentDescription"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="@dimen/subheading"
+                android:text="@string/add_contact"
+                android:layout_marginLeft="56dp"
+                android:layout_marginStart="56dp"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+</android.support.v7.widget.CardView>

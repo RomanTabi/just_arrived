@@ -1,0 +1,25 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="cz.justarrived.activities.MainActivity">
+
+     <item
+        android:id="@+id/action_search"
+        android:icon="@drawable/ic_search_24dp"
+        android:orderInCategory="1"
+        app:showAsAction="ifRoom"
+        android:title="@string/search"/>
+
+     <item
+         android:id="@+id/action_my_position"
+         android:orderInCategory="3"
+         app:showAsAction="never"
+         android:title="@string/start"/>
+
+     <item
+         android:id="@+id/action_destination"
+         android:orderInCategory="4"
+         app:showAsAction="never"
+         android:title="@string/finish"/>
+
+</menu>

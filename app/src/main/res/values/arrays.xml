@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="TriggerRadiusData">
+        <item>@string/value_20</item>
+        <item>@string/value_50</item>
+        <item>@string/value_100</item>
+        <item>@string/value_500</item>
+    </string-array>
+    <string-array name="TriggerRadius">
+        <item>@string/trigger_radius_20</item>
+        <item>@string/trigger_radius_50</item>
+        <item>@string/trigger_radius_100</item>
+        <item>@string/trigger_radius_500</item>
+    </string-array>
+</resources>
